@@ -30,7 +30,7 @@
 		var state = $(this).attr("value");
 		if (state==0){
 			lanzador.attr("value",1);
-			var posicion = $(this).position();
+			var posicion = $(this).offset();
 			var posx = posicion.left + lanzador.width()+4;
 			var posy = posicion.top;		
 			daPicker.css({"position" : "absolute","top": posy,"left": posx});
