@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>DaColorPicker JQuery</title>
+  <link rel="stylesheet" href="css/jquery.dacolorpicker.css" type="text/css"/>
+  <script src="js/jquery-1.9.1.js"></script>
+  <script src="../src/jquery.dacolorpicker.js"></script>
+    <script>
+    $(document).ready(function(){
+		$("#lanzador1").dacolorpicker({idDestino: "destino1",tipoPaleta: "PaletaColores2"});
+		$("#lanzador2").dacolorpicker({idDestino: "destino2"});
+		$("#lanzador3").dacolorpicker({idDestino: "destino3"});
+	});
+	</script>
+</head>
+<body>
+  <p>
+  <input type="text" id="destino1" />
+  <img src="images/cpicker.png" name="lanzador1" id="lanzador1" class="cpicker">
+  </p>
+
+  <p>
+  <input type="text" id="destino2" />
+  <img src="images/cpicker.png" name="lanzador2" id="lanzador2" class="cpicker">
+  </p>
+
+  <p>
+  <input type="text" id="destino3" />
+  <img src="images/cpicker.png" name="lanzador3" id="lanzador3" class="cpicker">
+  </p>
+
+
+  <div class="dacolor-picker" style="display: inline-block">
+  <script language="javascript">
+  var r = new Array("00","33","66","99","CC","FF");
+  var g = new Array("00","33","66","99","CC","FF");
+  var b = new Array("00","33","66","99","CC","FF");
+
+  for (i=0;i<r.length;i++){
+      for (j=0;j<g.length;j++) {
+         for (k=0;k<b.length;k++) {
+            var nuevoc = "#" + r[i] + g[j] + b[k];
+            document.write('<span class="color-pick" style="background:' + nuevoc + '" title="'+nuevoc+'">');
+            document.write("</span>");
+         }
+      }
+  }
+  </script>
+  <div class="cpicker-info">Color: </div>
+  </div>
+</body>
+</html>

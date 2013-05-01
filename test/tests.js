@@ -1,0 +1,1 @@
+var testMsg = "Passed finished!. Test return: ";
