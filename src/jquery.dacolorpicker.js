@@ -1,4 +1,4 @@
-/*
+/*!
  * Da colorpicker
  *
  * @name     dacolorpicker
