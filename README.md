@@ -1,4 +1,4 @@
 dacolorpicker
 =============
 
-jQuery colorpicker
+jQuery colorpicker plugin
