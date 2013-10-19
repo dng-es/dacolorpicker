@@ -4,7 +4,7 @@ dacolorpicker
 jQuery colorpicker plugin
 
 
-USAGE
+Example
 ```html
 <html>
 <head>
