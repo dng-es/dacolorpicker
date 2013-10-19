@@ -15,6 +15,7 @@
 	</script>
 </head>
 <body>
+  <h1>dacolorpicker Examples</h1>
   <p>
   <input type="text" id="dest1" />
   <img src="images/cpicker.png" name="trigger1" id="trigger1" class="cpicker">
@@ -29,25 +30,6 @@
   <input type="text" id="dest3" />
   <img src="images/cpicker.png" name="trigger3" id="trigger3" class="cpicker">
   </p>
-
-
-  <div class="dacolor-picker" style="display: inline-block">
-  <script language="javascript">
-  var r = new Array("00","33","66","99","CC","FF");
-  var g = new Array("00","33","66","99","CC","FF");
-  var b = new Array("00","33","66","99","CC","FF");
-
-  for (i=0;i<r.length;i++){
-      for (j=0;j<g.length;j++) {
-         for (k=0;k<b.length;k++) {
-            var nuevoc = "#" + r[i] + g[j] + b[k];
-            document.write('<span class="color-pick" style="background:' + nuevoc + '" title="'+nuevoc+'">');
-            document.write("</span>");
-         }
-      }
-  }
-  </script>
-  <div class="cpicker-info">Color: </div>
   </div>
 </body>
 </html>

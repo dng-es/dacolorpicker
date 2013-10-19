@@ -22,27 +22,20 @@
 	  idPalette = "#" + $(this).attr("name")+"_paleta";
 	  idInfo = $(this).attr("name")+"_paleta_info";
 	  colorsPalette = choosePalette();
-	  daPicker = $('<div id="'+idPalette+'" class="dacolor-picker">'+colorsPalette+'<div class="cpicker-info" id="'+idInfo+'">Color: </div></div>');	   
-	  e_trigger.attr("value",0);
+	  daPicker = $('<div id="'+idPalette+'" class="dacolor-picker">'+colorsPalette+'<div class="cpicker-info" id="'+idInfo+'">Color: </div></div>');
 	  daPicker.appendTo("body");
 	  
 	  /*e_trigger click event*/
 	  e_trigger.click(function(e){
 		e.preventDefault();
-		var state = $(this).attr("value");
-		if (state==0){
-			e_trigger.attr("value",1);
-			var posicion, posx, posy;
-			posicion = $(this).offset();
-			posx = posicion.left + e_trigger.width()+4;
-			posy = posicion.top;		
-			daPicker.css({"position" : "absolute","top": posy,"left": posx});
-			daPicker.fadeIn(500);			
-		}
-		else{
-			e_trigger.attr("value",0);
-			daPicker.fadeOut(200);
-		}
+		var posicion, posx, posy;
+		$(".dacolor-picker").hide();
+		posicion = $(this).offset();
+		posx = posicion.left + e_trigger.width()+4;
+		posy = posicion.top;		
+		daPicker.css({"position" : "absolute","top": posy,"left": posx});
+		daPicker.fadeIn(500);			
+
 	  });
 	  
 	  /*e_trigger mouseleave event */
@@ -68,41 +61,38 @@
 	  
 	  /*Color Palettes*/
 	  function choosePalette(){
-	  	  return configuration.paletteType=="palettePattern2" ? palettePattern2() : palettePattern1();
+	  	  //return configuration.paletteType=="palettePattern2" ? palettePattern2() : palettePattern1();
+	  	  return createPalette(configuration.paletteType=="palettePattern2" ? palettePattern2() : palettePattern1());
+	  }
+
+	  function createPalette(fn){
+		var output = "", i, j, k, new_color,
+			colors = fn;
+		for (i=0;i<colors.r.length;i++){
+			for (j=0;j<colors.g.length;j++) {
+			   for (k=0;k<colors.b.length;k++) {
+				  new_color = "#" + colors.r[i] + colors.g[j] + colors.b[k];
+				  output+='<span class="color-pick" style="background:' + new_color + '" title="'+new_color+'"></span>';
+			   }
+			}
+		}
+		return output; 	  	
 	  }
 
 	  function palettePattern1(){
-		var r = new Array("00","33","66","99","CC","FF"),
-			g = new Array("00","33","66","99","CC","FF"),
-			b = new Array("00","33","66","99","CC","FF"),			
-			palette="", i, j, k, new_color;
-
-		for (i=0;i<r.length;i++){
-			for (j=0;j<g.length;j++) {
-			   for (k=0;k<b.length;k++) {
-				  new_color = "#" + r[i] + g[j] + b[k];
-				  palette+='<span class="color-pick" style="background:' + new_color + '" title="'+new_color+'"></span>';
-			   }
-			}
-		}
-		return palette;  
+		var colors =new Array(3);
+		colors['r'] = new Array("00","33","66","99","CC","FF");
+		colors['g'] = new Array("00","33","66","99","CC","FF");
+		colors['b'] = new Array("00","33","66","99","CC","FF");
+		return colors; 
 	  }
 	  
 	  function palettePattern2(){
-		var r = new Array("C1","B4","A7","9A","8E","00"),
-			g = new Array("C1","00","22","44","66","88"),
-			b = new Array("C1","11","33","55","77","99"),
-			palette="", i, j, k, new_color;
-
-		for (i=0;i<r.length;i++){
-			for (j=0;j<g.length;j++) {
-			   for (k=0;k<b.length;k++) {
-				  new_color = "#" + r[i] + g[j] + b[k];
-				  palette+='<span class="color-pick" style="background:' + new_color + '" title="'+new_color+'"></span>';
-			   }
-			}
-		}
-		return palette;  
+		var colors =new Array(3);	
+		colors['r'] = new Array("C1","B4","A7","9A","8E","00");
+		colors['g'] = new Array("C1","00","22","44","66","88");
+		colors['b'] = new Array("C1","11","33","55","77","99");
+		return colors;   
 	  }
 	  
    });
