@@ -3,8 +3,7 @@ dacolorpicker
 
 jQuery colorpicker plugin
 
-Usage
-=====
+
 HTML
 ```html
   <p>
@@ -14,11 +13,12 @@ HTML
 ```
 JAVASCRIPT
 ```html
+  <link rel="stylesheet" href="jquery.dacolorpicker.css" type="text/css"/>
   <script src="jquery-1.9.1.js"></script>
   <script src="jquery.dacolorpicker.js"></script>
-    <script>
+  <script>
     $(document).ready(function(){
 		$("#trigger1").dacolorpicker({triggerDest: "dest1",paletteType: "palettePattern2"});
 	});
-	</script>
+  </script>
 ```
