@@ -4,8 +4,10 @@
  * @name     dacolorpicker
  * @param    paletteShow      show or not the image next to input
  * @param    paletteType      name of the palette to be use
- * @author   David Noguera Gutierrez
  * @example  $("#trigger1").dacolorpicker({paletteShow: true,paletteType: "palettePattern1"});
+ * @author   David Noguera Gutierrez
+ * @date 	 2012-12-15
+ * @license	 Released under the MIT license
  */
 (function($) {
  jQuery.fn.dacolorpicker = function(options) {
