@@ -1,8 +1,9 @@
 /*!
- * Da colorpicker
+ * Da colorpicker v1.0.1
  *
  * @name     dacolorpicker
- * @param    paletteShow      html element where color is sent
+ * @param    paletteShow      show or not the image next to input
+ * @param    paletteType      name of the palette to be use
  * @author   David Noguera Gutierrez
  * @example  $("#trigger1").dacolorpicker({paletteShow: true,paletteType: "palettePattern1"});
  */
