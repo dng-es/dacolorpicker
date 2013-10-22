@@ -31,7 +31,7 @@ Example 2: colorpicker without image added
 
 ```
 
-Example 3: colorpicker with image added and palette "palettePattern2". Current available palettes: "palettePattern1", "palettePattern2"
+Example 3: colorpicker with image added and palette "palettePattern2". Current available palettes: "palettePattern1" (default), "palettePattern2"
 ```html
       ...
       $("#dest1").dacolorpicker({imageShow: true, paletteType: "palettePattern2"});
