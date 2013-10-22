@@ -1,7 +1,7 @@
 dacolorpicker
 =============
 
-jQuery plugin, colorpicker.
+jQuery plugin, add a colorpicker to any input text.
 
 
 Example 1: colorpicker with image added
