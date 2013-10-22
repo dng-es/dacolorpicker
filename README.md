@@ -13,15 +13,12 @@ Example
   <script src="jquery.dacolorpicker.js"></script>
   <script>
     $(document).ready(function(){
-		$("#trigger1").dacolorpicker({triggerDest: "dest1",paletteType: "palettePattern2"});
-	});
+  		$("#dest1").dacolorpicker({imageShow: true});
+  	});
   </script>
 </head>
 <body>
-  <p>
-  <input type="text" id="dest1" />
-  <img src="images/cpicker.png" name="trigger1" id="trigger1" class="cpicker">
-  </p>
+  <input type="text" id="dest1" name="dest1" />
 </body>
 </html>
 ```

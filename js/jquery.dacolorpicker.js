@@ -2,9 +2,9 @@
  * Da colorpicker v1.0.1
  *
  * @name     dacolorpicker
- * @param    paletteShow      show or not the image next to input
+ * @param    imageShow      show or not the image next to input
  * @param    paletteType      name of the palette to be use
- * @example  $("#trigger1").dacolorpicker({paletteShow: true,paletteType: "palettePattern1"});
+ * @example  $("#trigger1").dacolorpicker({imageShow: true,paletteType: "palettePattern1"});
  * @author   David Noguera Gutierrez
  * @date	 2012-12-15
  * @license	 Released under the MIT license
@@ -13,7 +13,7 @@
  jQuery.fn.dacolorpicker = function(options) {
 	//Default options
 	var configuration = {
-	  paletteShow: true,
+	  imageShow: true,
 	  paletteType: "palettePattern1"
 	}
 	jQuery.extend(configuration, options);
@@ -27,7 +27,7 @@
 		colorsPalette = choosePalette();
 		daPicker = $('<div id="'+idPalette+'" class="dacolor-picker">'+colorsPalette+'<div class="cpicker-info" id="'+idInfo+'">Color: </div></div>');
 		daPicker.appendTo("body");
-		if (configuration.paletteShow){
+		if (configuration.imageShow){
 			daPickerImg = $('<img src="images/cpicker.png" class="cpicker">');
 			daPickerImg.insertAfter(e_trigger);
 			daPickerImg.click(function() {
@@ -62,7 +62,7 @@
 		function showPalette(e){
 			var posx, posy;
 			$(".dacolor-picker").hide();
-			posx = configuration.paletteShow ? (e_trigger.outerWidth() + daPickerImg.outerWidth() + 10) : (e_trigger.outerWidth()+10);
+			posx = configuration.imageShow ? (e_trigger.outerWidth() + daPickerImg.outerWidth() + 10) : (e_trigger.outerWidth()+10);
 			posy = e.offset().top;		
 			daPicker.css({"position" : "absolute","top": posy,"left": posx});
 			daPicker.fadeIn(500);
