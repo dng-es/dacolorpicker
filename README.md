@@ -4,7 +4,7 @@ dacolorpicker
 jQuery plugin, add a colorpicker to any input text.
 
 
-Example 1: colorpicker with image added
+Example 1: colorpicker adding image to the input text
 ```html
 <html>
 <head>
@@ -23,7 +23,7 @@ Example 1: colorpicker with image added
 </html>
 ```
 
-Example 2: colorpicker without image added
+Example 2: colorpicker without adding image to the input text
 ```html
       ...
       $("#dest1").dacolorpicker({imageShow: false});
