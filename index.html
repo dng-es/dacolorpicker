@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Dacolorpicker by dng-es</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Dacolorpicker</h1>
+        <p>jQuery plugin, colorpicker</p>
+
+        <p class="view"><a href="https://github.com/dng-es/dacolorpicker">View the Project on GitHub <small>dng-es/dacolorpicker</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/dng-es/dacolorpicker/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/dng-es/dacolorpicker/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/dng-es/dacolorpicker">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <p>dacolorpicker - jQuery plugin, add a colorpicker to any input text.</p>
+
+<p>Example 1: colorpicker adding image to the input text</p>
+
+<div class="highlight highlight-html"><pre><span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+  <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"jquery.dacolorpicker.css"</span> <span class="na">type=</span><span class="s">"text/css"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"jquery-1.9.1.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+  <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"jquery.dacolorpicker.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+  <span class="nt">&lt;script&gt;</span>
+    <span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+        <span class="nx">$</span><span class="p">(</span><span class="s2">"#dest1"</span><span class="p">).</span><span class="nx">dacolorpicker</span><span class="p">();</span>
+    <span class="p">});</span>
+  <span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"dest1"</span> <span class="na">name=</span><span class="s">"dest1"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre></div>
+
+<p>Example 2: colorpicker without adding image to the input text</p>
+
+<div class="highlight highlight-html"><pre>      ...
+      $("#dest1").dacolorpicker({imageShow: false});
+      ...
+
+</pre></div>
+
+<p>Example 3: colorpicker with image added and palette "palettePattern2". Current available palettes: "palettePattern1" (default), "palettePattern2"</p>
+
+<div class="highlight highlight-html"><pre>      ...
+      $("#dest1").dacolorpicker({imageShow: true, paletteType: "palettePattern2"});
+      ...
+
+</pre></div>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/dng-es">dng-es</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
