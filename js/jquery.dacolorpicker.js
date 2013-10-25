@@ -1,5 +1,5 @@
 /*!
- * Da colorpicker v1.0.1
+ * Da colorpicker v1.0.2
  *
  * @name     dacolorpicker
  * @param    imageShow      show or not the image next to input
@@ -62,7 +62,7 @@
 		function showPalette(e){
 			var posx, posy;
 			$(".dacolor-picker").hide();
-			posx = configuration.imageShow ? (e_trigger.outerWidth() + daPickerImg.outerWidth() + 10) : (e_trigger.outerWidth()+10);
+			posx = configuration.imageShow ? (daPickerImg.offset().left + daPickerImg.outerWidth( true )) : (e_trigger.offset().left + e_trigger.outerWidth( true ));
 			posy = e.offset().top;		
 			daPicker.css({"position" : "absolute","top": posy,"left": posx});
 			daPicker.fadeIn(500);

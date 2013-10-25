@@ -3,31 +3,32 @@
 .dacolor-picker {
 	background: #f9f9f9;
 	border:1px solid #f0f0f0;
-	width: 145px; 
-	height:240px; 
-	display: none;
-	padding: 4px 2px 0 3px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
+	border-radius: 5px;
     box-shadow: 2px 2px 5px #444;
     -moz-box-shadow: 2px 2px 5px #444;
     -webkit-box-shadow: 2px 2px 5px #444;	
+	display: none; 
+	height:240px;	
+	padding: 4px 2px 0 3px;
+    -moz-border-radius: 5px;
+    position:absolute;
+    width: 145px;
 	}
 .color-pick { 
 	border:0px solid #000; 
-	width: 10px; 
-	height:10px; 
-	display: inline-block; 
+	cursor: pointer; 
+	display: inline-block;
+	float: left;
+	height:10px; 	 
 	margin: 1px; 
 	padding: 0px; 
-	float: left;
-	cursor: pointer;
+	width: 10px;
 }
 .cpicker{cursor: pointer;}
 .cpicker-info {
-	padding: 5px 2px 2px 5px;
+	color: #000;
+	display:inline-block;
 	font-size: 11px;
 	font-family:Verdana, Geneva, sans-serif;
-	display:inline-block;
-	color: #000;
+	padding: 5px 2px 2px 5px;
 }
