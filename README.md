@@ -38,3 +38,5 @@ Example 3: colorpicker with image added and palette "palettePattern2". Current a
       ...
 
 ```
+
+<a href="http://dng-es.github.io/dacolorpicker" target="_blank">More info</a>
