@@ -1,5 +1,5 @@
 /*!
- * Da colorpicker v1.0.1
+ * Da colorpicker v1.0.2
  *
  * @name     dacolorpicker
  * @param    imageShow      show or not the image next to input
